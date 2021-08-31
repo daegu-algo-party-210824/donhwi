@@ -40,7 +40,7 @@ def solution(food_times, k):
     food_times = sorted(food_times, key=lambda x : x[1])
     return food_times[k % len(food_times)][1]
 
-print(solution([3,1,2], 5))
+print(solution([3,1,2], 5)) 
 print(solution([4,2,3,6,7,1,5,8], 16))
 print(solution([4,2,3,6,7,1,5,8], 27))
 print(solution([3,1,1,1,2,4,3], 12))
