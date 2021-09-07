@@ -11,7 +11,7 @@ for _ in range(m):
     start, end = map(int, sys.stdin.readline().rstrip().split(" "))
     graph[start].append(end)
 
-def dfs(v, distances):
+def bfs(v, distances):
     queue = deque()
     queue.append(v)
     distances[v] = 0
@@ -26,7 +26,7 @@ def dfs(v, distances):
             if distances[nv] > distances[v] + 1:
                 distances[nv] = distances[v] + 1
 
-dfs(x, distances)
+bfs(x, distances)
 
 count = 0
 
