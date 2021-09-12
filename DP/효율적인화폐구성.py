@@ -4,15 +4,15 @@ for _ in range(n):
     coin_types.append(int(input()))
 
 INF = 999999999
-d = [INF] * 10001
+d = [INF] * (m+1)
 d[0] = 0
 
-for coin in coin_types:
-    d[coin] = 1
+for i in range(m+1):
+    for coin in coin_types:
+        if i - coin >= 0:
+            d[i] = min(d[i], d[i-coin] + 1)
 
-for i in range(n):
-    for j in range(coin_types[i], m+1):
-        d[j] = min(d[j], d[j-coin_types[i]] + 1)
+print(d)
 
 if d[m] is INF:
     print(-1)
