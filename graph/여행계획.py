@@ -18,13 +18,11 @@ parent = [0] * n
 for i in range(n):
     parent[i] = i
 
-index = 0
-for _ in range(n):
+for i in range(n):
     data = list(map(int, input().split()))
-    for i in range(n):
-        if data[i]:
-            union_parent(parent, index, i)
-    index += 1
+    for j in range(n):
+        if data[j]:
+            union_parent(parent, i, j)
 
 result = True
 cities = list(map(int, input().split()))
