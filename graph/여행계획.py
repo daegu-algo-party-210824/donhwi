@@ -21,7 +21,7 @@ for i in range(n):
 for i in range(n):
     data = list(map(int, input().split()))
     for j in range(n):
-        if data[j]:
+        if data[j] and i < j: # 입력이 대칭이므로 union이 불필요하게 2번 수행됨
             union_parent(parent, i, j)
 
 result = True
