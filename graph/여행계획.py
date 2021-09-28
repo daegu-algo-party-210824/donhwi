@@ -26,10 +26,10 @@ for i in range(n):
 
 result = True
 cities = list(map(int, input().split()))
-root = parent[cities[0]-1]
+root = find_parent(parent, cities[0]-1)
 
 for city in cities[1:]:
-    if root != parent[city-1]:   # index 맞추기
+    if root != find_parent(parent, city-1):   # index 맞추기
         result = False
         break
 
