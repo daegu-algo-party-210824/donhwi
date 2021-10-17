@@ -3,7 +3,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class N1697 {
 
 	static int N, K;		// 수빈이의 위치, 동생의 위치 
 	static int[] visited = new int[200002];
